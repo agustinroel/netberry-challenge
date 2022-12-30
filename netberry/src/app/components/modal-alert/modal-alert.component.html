@@ -1,0 +1,11 @@
+<div>
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+  <div mat-dialog-content>
+    <h4>{{ data.msg }}</h4>
+    <img src="../../../assets/img/warning.png" alt="">
+  </div>
+  <div mat-dialog-actions align="center">
+    <button color="warn" mat-button mat-dialog-close>Cancel</button>
+    <button color="basic" mat-button mat-dialog-close cdkFocusInitial (click)="onAccept()">OK</button>
+  </div>
+</div>

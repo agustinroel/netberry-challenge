@@ -1,0 +1,20 @@
+{
+  "data": 
+  [
+      {
+          "id": 0,
+          "title": "Compras",
+          "content": "Comprar fruta, verdura, carne y leche"
+        },
+        {
+          "id": 1,
+          "title": "Recordatorio",
+          "content": "Ir al gimnasio todos los miércoles y viernes"
+        },
+        {
+          "id": 2,
+          "title": "Lavandería",
+          "content": "Llevar la ropa sucia a lavar"
+        }
+]
+}
