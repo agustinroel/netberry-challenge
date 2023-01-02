@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalAlertComponent } from './components/modal-alert/modal-alert.component';
 import { ModalEditComponent } from './components/modal-edit/modal-edit.component';
 import { MatInputModule } from '@angular/material/input'
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,11 @@ import { MatInputModule } from '@angular/material/input'
     BrowserModule,
     AppRoutingModule,
     MatTableModule, 
+    MatToolbarModule,
     MatButtonModule,
     MatTooltipModule,
     FormsModule,
+    MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
     MatFormFieldModule, 

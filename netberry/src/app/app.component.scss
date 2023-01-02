@@ -1,23 +1,4 @@
-tr th {
-    justify-content: center;
-    text-align: center;
-    margin: 20px
-  }
-  
-  td {
-    text-align: center;
-  }
-  
-  table {
-    width: 100%;
-    margin-bottom: 3em;
-  }
-  
-  mat-icon {
-    cursor: pointer;
-  }
-  
-  .logo {
+.logo {
     display: block;
     width: 250px;
     margin-left: auto;
@@ -25,21 +6,12 @@ tr th {
     margin-top: 20px;
     filter: drop-shadow(5px 5px 4px #95959a);
   }
-  
-  .add-button{
-    float: right;
-    margin: 20px;
-    background-color: rgb(206, 134, 2);
+
+.main-button{
+    margin: 5px;
+    background-color: rgb(206, 134, 2);;
   }
-  
-  .container{
-      margin-left: 5%;
-      margin-right: 5%;
-  }
-  
-  .post-image{
-      margin: 5px;
-      width: 150px;
-      border-radius: 10%;
-  }
-  
+
+.toolbar{
+    justify-content: flex-end;
+}
