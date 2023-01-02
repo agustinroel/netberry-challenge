@@ -44,8 +44,8 @@ export class AppComponent implements OnInit {
 
   onCreateTask(){
     const newTask = this.dialog.open(ModalEditComponent, {
-      height: '60%',
-      width: '100%',
+      height: 'auto',
+      width: 'auto',
       data: {
         isEdit: false,
         msg: 'Fill this form to create a new task',
@@ -86,8 +86,8 @@ export class AppComponent implements OnInit {
 
   onEdit(element: any){
     const editTask = this.dialog.open(ModalEditComponent, {
-      height: '60%',
-      width: '100%',
+      height: 'auto',
+      width: 'auto',
       data: {
         isEdit: true,
         msg: 'Edit this form fields and save to update this task',

@@ -24,7 +24,7 @@ tasksEndpoint = '/data';
   }
 
   deleteTask(item: any): Observable<any>{
-    return this.http.delete(`${this.baseUrl}${this.tasksEndpoint}`+`${item.id}`)
+    return this.http.delete(`${this.baseUrl}${this.tasksEndpoint}`+'/'+`${item.id}`)
   }
 }
 

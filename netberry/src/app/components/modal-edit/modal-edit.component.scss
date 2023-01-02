@@ -10,6 +10,20 @@ h1{
     text-align: center;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cancel-button{
+    color: black;
+}
+
+.save-button{
+    background-color: rgb(206, 134, 2);
+}
+
 .mat-dialog-actions.footer{
     justify-content: center;
     padding: 8px 24px;

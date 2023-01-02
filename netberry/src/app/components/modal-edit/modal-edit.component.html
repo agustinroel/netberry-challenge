@@ -19,7 +19,7 @@
 
       <!-- Content -->
 
-      <mat-form-field appearance="outline" class="mat-form-field-should-float formfield" required>
+      <mat-form-field appearance="outline" class="content-input formfield" required>
         <mat-label>
           {{ 'Content' }}
         </mat-label>
@@ -31,10 +31,10 @@
   </mat-dialog-content>
   <mat-dialog-actions align="end">
     <button mat-stroked-button color="primary" *ngIf="showCancelButton" [mat-dialog-close]="confirm"
-      class="button_custom button_custom_cancel">
+      class="cancel-button">
       {{ 'Cancel' }}
     </button>
-    <button mat-raised-button color="primary" (click)="onAccept()" class="button_custom button_custom_confirm">
+    <button mat-raised-button color="primary" (click)="onAccept()" class="save-button">
       {{ 'Save' }}
     </button>
   </mat-dialog-actions>
