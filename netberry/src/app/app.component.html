@@ -1,8 +1,7 @@
 
 <p>
   <mat-toolbar class="toolbar">
-    <button mat-raised-button color="primary" class="main-button" type="button" routerLink="/login">Login</button>
-    <button mat-raised-button color="primary" class="main-button" type="button" routerLink="/tasks">Tasks</button>
+    <button mat-raised-button *ngIf="auth.isAuthenticated$ | async" (click)="logout()">Log out</button>    
   </mat-toolbar>
 </p>
 

@@ -5,7 +5,7 @@ const routes: Routes = [{ path: 'login', loadChildren: () => import('./login/log
  { path: 'tasks', loadChildren: () => import('./tasks/tasks.module').then(m => m.TasksModule) },
  {
    path: '',
-   redirectTo: 'login',
+   redirectTo: 'tasks',
    pathMatch: 'full'
  }
 ];

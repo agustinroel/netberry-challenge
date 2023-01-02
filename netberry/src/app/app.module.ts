@@ -16,6 +16,8 @@ import { ModalAlertComponent } from './components/modal-alert/modal-alert.compon
 import { ModalEditComponent } from './components/modal-edit/modal-edit.component';
 import { MatInputModule } from '@angular/material/input'
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatDialogModule,
     HttpClientModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AuthModule.forRoot({
+      ...env.auth,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,11 @@
-import { domain, clientId } from '../../auth_config.json';
+import authConfig from '../../auth_config.json';
 
 export const environment = {
   production: false,
   auth: {
-    domain,
-    clientId,
+    domain: authConfig.domain,
+    clientId: authConfig.clientId,
     redirectUri: window.location.origin,
   },
 };
+

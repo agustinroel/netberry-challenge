@@ -1,1 +1,5 @@
-<p>login works!</p>
+<div class="container">
+  <button mat-raised-button color="primary" *ngIf="(auth.isAuthenticated$ | async) === false" (click)="loginWithRedirect()">
+    Log in
+  </button>
+</div>
