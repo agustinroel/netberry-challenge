@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TaskModel } from '../../models/task.model';
 import { ModalAlert } from '../../interfaces/modal-alert.interface';
-
 import { ComunicationComponentService } from '../../services/comunication-component/comunication-component.service';
 
 
@@ -16,9 +15,11 @@ export class ModalEditComponent implements OnInit {
   public confirm: boolean;
   public showCancelButton = true;
   task: TaskModel;
+  tags = ['home', 'groceries', 'entretainment', 'work', 'plans', 'other']
   tasksForm = new FormGroup({
     title: new FormControl('', [Validators.pattern(/^[A-Za-z0-9-_ ]*$/), Validators.required]),
     content: new FormControl('', [Validators.pattern(/^[A-Za-z0-9-_ ]*$/), Validators.required]),
+    tag: new FormControl(''),
   })
   constructor(
     private readonly dialog: MatDialog,
@@ -36,6 +37,7 @@ export class ModalEditComponent implements OnInit {
     if (this.data.element) {
       this.tasksForm.controls['title'].setValue(this.data.element.title);
       this.tasksForm.controls['content'].setValue(this.data.element.content);
+      this.tasksForm.controls['tag'].setValue(this.data.element.tag);
     }
   }
 
@@ -47,6 +49,7 @@ export class ModalEditComponent implements OnInit {
     }
     this.task.title = this.tasksForm.controls['title'].value;
     this.task.content = this.tasksForm.controls['content'].value;
+    this.task.tag = this.tasksForm.controls['tag'].value;
     console.log('post', this.task)
     this.confirm = true;
     this.dialogRef.close(this.confirm);

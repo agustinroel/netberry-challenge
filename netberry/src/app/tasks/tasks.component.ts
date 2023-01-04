@@ -22,12 +22,14 @@ export class TasksComponent implements OnInit {
   createdTask: any;
   editedTask: any;
   private readonly $destroyUntil = new Subject<boolean>();
-  displayedColumns: string[] = ['id', 'title', 'content', 'actions'];
+  displayedColumns: string[] = ['id', 'title', 'content', 'tags', 'actions'];
+  changesNotMade: boolean;
+
   constructor(
     private appService: AppServiceService,
     private readonly comunication: ComunicationComponentService,
     public dialog: MatDialog) {
-
+    this.changesNotMade = true;
   }
 
   ngOnInit(): void {
@@ -35,7 +37,6 @@ export class TasksComponent implements OnInit {
   }
 
   getAllTasks() {
-
     this.appService.listTasks().pipe(take(1)).subscribe((res: Tasks[]) => {
       this.tasks = res;
       this.dataSource.data = res;
@@ -84,6 +85,13 @@ export class TasksComponent implements OnInit {
       disableClose: false
     })
   }*/
+
+  changesMade(evt: any, element: any) {
+    if (evt) {
+      element.tag = evt.value;
+      this.changesNotMade = false;
+    }
+  }
 
   onEdit(element: any) {
     const editTask = this.dialog.open(ModalEditComponent, {

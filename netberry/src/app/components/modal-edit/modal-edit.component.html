@@ -27,6 +27,13 @@
         <mat-hint align="end">{{ input.value.length || 0}}/99</mat-hint>
       </mat-form-field>
 
+      <!-- Tag -->
+
+      <mat-form-field appearance="outline" class="content-input formfield" required>
+        <mat-select formControlName="tag" placeholder="Select a tag...">
+          <mat-option *ngFor="let tag of tags" [value]="tag">{{ tag }}</mat-option>
+        </mat-select>
+      </mat-form-field>
     </form>
   </mat-dialog-content>
   <mat-dialog-actions align="end">

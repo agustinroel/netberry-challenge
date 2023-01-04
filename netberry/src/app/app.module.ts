@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { environment as env } from '../environments/environment';
     AppRoutingModule,
     MatTableModule, 
     MatToolbarModule,
+    MatSelectModule,
     MatButtonModule,
     MatTooltipModule,
     FormsModule,

@@ -3,22 +3,26 @@
     {
       "id": 0,
       "title": "Compras",
-      "content": "Comprar fruta, verdura, carne y leche"
+      "content": "Comprar fruta, verdura, carne y leche",
+      "tag": "groceries"
     },
     {
       "id": 1,
       "title": "Recordatorio",
-      "content": "Ir al gimnasio todos los miércoles y viernes"
+      "content": "Ir al gimnasio todos los miércoles y viernes",
+      "tag": "plans"
     },
     {
       "id": 2,
       "title": "Lavandería",
-      "content": "Llevar la ropa sucia a lavar"
+      "content": "Llevar la ropa sucia a lavar",
+      "tag": "home"
     },
     {
       "id": 3,
       "title": "New task",
-      "content": "test task"
+      "content": "test task",
+      "tag": "other"
     }
   ]
 }
